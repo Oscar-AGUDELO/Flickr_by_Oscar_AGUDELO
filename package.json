@@ -1,5 +1,5 @@
 {
-  "homepage":"https://yourUserName.github.io/yourRepositoryName",
+  "homepage":"https://localhost:3000",
   "name": "template_react",
   "version": "0.1.0",
   "private": false,

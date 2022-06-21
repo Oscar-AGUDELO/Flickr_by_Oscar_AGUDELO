@@ -1,26 +1,24 @@
 import React from "react";
-import "./assets/App.css";
+import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Page1 from "./pages/Page1";
-import Page2 from "./pages/Page2";
-import AboutUs from "./pages/AboutUs";
-import Nav from "./components_Fathers/Nav";
-import Footer from "./components_Fathers/Footer";
+import Search from "./pages/Search/Search";
+import SearchResults from "./pages/SearchResults/SearchResults";
+import Favorites from "./pages/Favorites/Favorites";
+import PhotoViewer from "./pages/PhotoViewer/PhotoViewer";
+import Nav from "./components/Nav/Nav";
 
 const App = () => {
   return (
     <div className="appDivContainer">
       <div className="appDivContainerBody">
-        <Nav />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Page1" element={<Page1 />} />
-          <Route path="/Page2" element={<Page2 />} />
-          <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/" element={<Search />} />
+          <Route path="/SearchResults" element={<SearchResults />} />
+          <Route path="/Favorites" element={<Favorites />} />
+          <Route path="/PhotoViewer" element={<PhotoViewer />} />
         </Routes>
       </div>
-      <Footer />
+      <Nav />
     </div >
   );
 };

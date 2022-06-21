@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import zLogo from "../assets/zLogo.png";
+import "./Nav.css"
+import zLogo from "../../assets/zLogo.png";
 
 function Nav() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -39,13 +40,13 @@ function Nav() {
           <Link to="/" className="navItemBurger">
             Home
           </Link>
-          <Link to="/Page1" className="navItemBurger">
+          <Link to="/SearchResults" className="navItemBurger">
             Page 1
           </Link>
-          <Link to="/Page2" className="navItemBurger">
+          <Link to="/Favorites" className="navItemBurger">
             Page 2
           </Link>
-          <Link to="/AboutUs" className="navItemBurger">
+          <Link to="/PhotoViewer" className="navItemBurger">
             About Us
           </Link>
         </nav>
