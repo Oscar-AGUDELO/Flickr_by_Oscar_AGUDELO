@@ -1,52 +1,22 @@
-
-.navHeader{
+.navContainer{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 2.5rem;
+  background-color:var(--color-1)
 }
-.navHeader h1{
-  margin: 1rem 1rem;
-}
-.navButton{
-  margin: 0.5rem 0.5rem;
-  background-color: transparent;
-  border: 0;
-}
-.navName{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.navLogo{
-  height: 4rem;
-  -webkit-animation: 1s linear 0s infinite alternate move_logo;
-  animation: 1s linear 0s infinite alternate move_logo;
-  
-}
-@-webkit-keyframes move_logo { from { transform: rotate(-10deg); } to { transform: rotate(0deg); }  }
-        @keyframes move_logo { from { transform: rotate(-10deg); } to { transform: rotate(0deg); }  }
-
-.navBurger{
+.navItem{
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-around;
-  height: 12rem;
-  
-
+  align-items: center;
+  justify-content: center;
+  transition:1s;
 }
-.navItemBurger{
-  background-color: var(--button-color);
-  border-radius: 10px;
-  padding: 0.5rem;
-  margin-right: 1rem;
-  text-align: end;
+.navItem:hover{
+  width: 60%;
 }
-@-webkit-keyframes move_eye { from { width:23%; } to { width:30%; }  }
-        @keyframes move_eye { from { width:23%; } to { width:30%; }  }
-
-.navItemBurger:hover{
-  background-color: var(--primary-color);
-  -webkit-animation: 1s linear 0s infinite alternate move_eye;
-  animation: 1s linear 0s infinite alternate move_eye;
+.navItem p{
+  color:var(--color-2);
+  font-size:var(--help-text)
 }
