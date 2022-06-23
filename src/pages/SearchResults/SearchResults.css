@@ -1,10 +1,18 @@
-.Page1DivContainer{
-    margin-top: 1rem;
-    margin-left: 15%;
-    margin-right: 15%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+.SearchResultsContainer .header img{
+    margin-left: 0.5rem;
+}
+.SearchResultsContainer .header h1{
+    margin-left: 0.5rem;
+    font-size: var(--title);
+    color: var(--color-2);
+}
+.SearchResultsContainer .header{
+    height: 3.5rem;
+    background:var(--color-1);
+    display:flex;
+    align-items:center;
+    border:0;
+    width:100%;
+    position:fixed;
+    top:0;
 }

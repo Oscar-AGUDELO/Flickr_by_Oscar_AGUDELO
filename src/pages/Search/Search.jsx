@@ -1,30 +1,7 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { Navigate } from 'react-router-dom';
 import "./Search.css";
-const Search = () => {
-  const [keyword, setKeyword] = useState({ Search: "" });
-  const [go, setGo] = useState(false);
-  const [data, setData] = useState({});
-  const API = "https://random-data-api.com/api/vehicle/random_vehicle";
-
-  const fetchAPI = async () => {
-    try {
-      const response = await axios.get(API);
-      setData(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const charging = (e) => {
-    e.preventDefault();
-    setGo(true);
-    setTimeout(() => {
-      fetchAPI();
-    }, 1500);
-  };
-      console.log(data)
-      console.log(keyword)
+const Search = ({ showData, go, charging, setKeyword }) => {
 
   const handleChange = (e) => {
     setKeyword({
@@ -32,6 +9,10 @@ const Search = () => {
       [e.target.name]: e.target.value,
     });
   };
+  if (showData) {
+    return <Navigate to='/SearchResults' />
+   }
+  if (!showData)
   return (
     <div className="SearchContainer">
       <header><h1>Search</h1></header>
@@ -48,7 +29,7 @@ const Search = () => {
         </button>
       </form>
     </div>
-  );
+  )
 };
 
 export default Search;
