@@ -1,100 +1,243 @@
-header{
-    height: 3.5rem;
-    background:var(--color-1);
-    display:flex;
-    align-items:center;
-    position:fixed;
-    top:0;
-    width:100%;
+#SearchContainer header {
+  height: 3.5rem;
+  background: var(--color-1);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
-header h1{
-    margin-left: 1rem;
-    font-size: var(--title);
-    color: var(--color-2);
+
+#SearchContainer header h1 {
+  margin-left: 1rem;
+  font-size: var(--title);
+  color: var(--color-2);
 }
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    width:100%;
-    height:calc(100vh - 6rem);
+
+#SearchContainer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 6rem);
 }
-label{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    text-align: left;
-    width:100%;
+
+#SearchContainer label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: 100%;
 }
-label p{
-    width: 75%;
-    margin-left: 1.9rem;
-    font-size:var(--help-text)
+
+#SearchContainer label p {
+  width: 75%;
+  margin-left: 1.9rem;
+  font-size: var(--help-text)
 }
-label input{
-    width: 75%;
-    padding-left: 0.9rem;
-    padding-bottom: 0.3rem;
-    border:0;
-    border-bottom: 2px solid var(--color-1);
-    outline: none
+
+#SearchContainer label input {
+  width: 75%;
+  padding-left: 0.9rem;
+  padding-bottom: 0.3rem;
+  border: 0;
+  border-bottom: 2px solid var(--color-1);
+  outline: none
 }
-.go{
-    width: 25%;
-    text-align: center;
-    margin-top: 2rem;
-    padding:0.7rem 0.5rem;
-    background: var(--color-4);
-    color:var(--color-2);
-    border:1px solid var(--color-2);
-    border-radius: var(--radius);
-    transition:1s;
+
+#SearchContainer .go {
+  width: 25%;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0.7rem 0.5rem;
+  background: var(--color-4);
+  color: var(--color-2);
+  border: 1px solid var(--color-2);
+  border-radius: var(--radius);
+  transition: 1s;
 }
-.gso:hover{
-    background: var(--color-2);
-    color:var(--color-4);
-    border:1px solid var(--color-4);
+
+#SearchContainer .go:hover {
+  background: var(--color-2);
+  color: var(--color-4);
+  border: 1px solid var(--color-4);
 }
 
 
 /* Loading css */
-.lds-ring {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding:0.5rem;
+#SearchContainer .lds-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+}
+
+#SearchContainer .lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+#SearchContainer .lds-ring div:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#SearchContainer .lds-ring div:nth-child(2) {
+  animation-delay: 0s;
+}
+
+#SearchContainer .lds-ring div:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
   }
-  .lds-ring div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 1.5rem;
-    height: 1.5rem;
-    text-align: center;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #fff transparent transparent transparent;
+
+  100% {
+    transform: rotate(360deg);
   }
-  .lds-ring div:nth-child(1) {
-    animation-delay: 0s;
+}
+
+
+
+/* desktop version */
+
+#SearchContainer_vdesktop {
+  background: var(--color-1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:calc(100vh);
+}
+
+
+
+
+#SearchContainer_vdesktop .langages {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 3.5rem;
+  z-index: 10;
+}
+#SearchContainer_vdesktop .langages img {
+  margin: 2rem;
+}
+#SearchContainer_vdesktop .langages select {
+  background-color:transparent;
+  border:0;
+  color:var(--color-2);
+  font-size: 1.2rem;
+}
+
+#SearchContainer_vdesktop .langages option{
+  background-color:var(--color-2);
+  border:0;
+  color:var(--color-3);
+}
+#SearchContainer_vdesktop section{
+  height:100%;
+  width:100%;
+  margin-top: -10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+#SearchContainer_vdesktop h1{
+  color:var(--color-2);
+  margin: 3rem;
+}
+#SearchContainer_vdesktop .search{
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+#SearchContainer_vdesktop .search button{
+  margin-left: 1rem;
+  background-color: black;
+  color:var(--color-2);
+  padding: 0.5rem 0.8rem;
+  border:0;
+  font-size:1.3rem;
+  height: 2.7rem;
+  border-radius: 7px;
+  -webkit-box-shadow: -2px 3px 20px 8px rgba(0,0,0,0.18); 
+  box-shadow: -2px 3px 20px 8px rgba(0,0,0,0.18);
+}
+#SearchContainer_vdesktop label{
+  width: 25%;
+  height: 2.7rem;
+  border: 0;
+  border-radius: 7px;
+  display: flex;
   }
-  .lds-ring div:nth-child(2) {
-    animation-delay: 0s;
-  }
-  .lds-ring div:nth-child(3) {
-    animation-delay: 0s;
-  }
-  @keyframes lds-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
+#SearchContainer_vdesktop .search input{
+width: 100%;
+padding: 0.5rem 0.8rem;
+padding-left: 3rem;
+border: 0;
+border-radius: 7px;
+outline: none;
+background-image: url(../../assets/SearchIcon_dark.svg);
+background-size: 3%;
+background-position: 19px 15px;
+background-repeat: no-repeat;
+caret-color: var(--color-1);
+font-size:1.3rem;
+}
+#SearchContainer_vdesktop .search input:focus::placeholder {
+  color: transparent;
+}
+/* Loading css *//*
+#SearchContainer_vdesktop .lds-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+}
+
+#SearchContainer_vdesktop .lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+#SearchContainer_vdesktop .lds-ring div:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#SearchContainer_vdesktop .lds-ring div:nth-child(2) {
+  animation-delay: 0s;
+}
+
+#SearchContainer_vdesktop .lds-ring div:nth-child(3) {
+  animation-delay: 0s;
+} */

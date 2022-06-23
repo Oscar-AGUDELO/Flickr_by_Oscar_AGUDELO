@@ -8,15 +8,19 @@ const Results = ({ convertedData, keyword, goToPhotoViewer }) => {
       {convertedData.map((pic) => {
         const srcPic = "https://farm" + pic.farm + ".static.flickr.com/" + pic.server + "/" + pic.id + "_" + pic.secret + ".jpg";
         return (
-          <li key={pic.id} className="buttonPic" onClick={() => goToPhotoViewer(pic)}>
+          <li key={pic.id} className="buttonPic" >
             {pic.goToPhoto ?
               (<div className="fullPicContainer">
-              <img className="fullPic" alt={"photo" + keyword.Search} src={srcPic} />
-              <div className="containerTitle"><h1>{pic.title}</h1><button><img alt="likeOFFIcon" src={likeOFF} /></button></div>
+                <button className="fullPic" onClick={() => goToPhotoViewer(pic)}><img  alt={"photo" + keyword.Search} src={srcPic} /></button>
+                <div className="containerTitle_Like">
+                  <h1 className="titlePhoto" >{pic.title}</h1>
+                  <button>
+                    <img alt="likeOFFIcon" src={likeOFF} />
+                  </button></div>
               </div>)
               :
               (
-                <img className="pic" alt={"photo" + keyword.Search} src={srcPic} />
+                <button className="pic" onClick={() => goToPhotoViewer(pic)}><img className="pic" alt={"photo" + keyword.Search} src={srcPic} /></button>
               )
             }
           </li>
