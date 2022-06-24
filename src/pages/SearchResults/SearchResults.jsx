@@ -14,7 +14,7 @@ const SearchResults = ({ convertedData, setConvertedData, data, keyword, setGo, 
       return onepic;
     });
     setConvertedData(addData);
-  }, [showData]);
+  }, [data.photos.photo, setConvertedData, showData]);
 
   const [goToPhoto, setGoToPhoto] = useState(false);
   const goToPhotoViewer = (item) => {
