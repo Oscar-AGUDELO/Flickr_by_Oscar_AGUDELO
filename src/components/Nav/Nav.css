@@ -1,0 +1,25 @@
+.navContainer{
+  display: flex;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 2.5rem;
+  background-color:var(--color-1)
+}
+.navItem{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition:1s;
+}
+.navItem:hover{
+  width: 60%;
+}
+.navItem p{
+  color:var(--color-2);
+  font-size:var(--help-text)
+}
