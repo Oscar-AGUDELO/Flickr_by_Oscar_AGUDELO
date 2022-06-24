@@ -10,7 +10,6 @@ import Nav from "./components/Nav/Nav";
 const App = () => {
   
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const [isFavorite, setIsFavorite] = useState(false);
   const [convertedData, setConvertedData] = useState([]);
   const [keyword, setKeyword] = useState({ Search: "" });
   const [showData, setShowData] = useState(false);
