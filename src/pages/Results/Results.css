@@ -64,7 +64,7 @@
 .titlePhoto{
     width:100%;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.7rem;
 }
 .containerTitle_Like button{
     background-color:transparent;
@@ -72,5 +72,5 @@
     margin-top:1rem;
 }
 .likeOFFIcon{
-    width:6rem;
+    width:3rem;
 }
