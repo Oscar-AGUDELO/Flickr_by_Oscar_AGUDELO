@@ -64,9 +64,9 @@ const Favorites = () => {
                           <h1 className="titlePhoto" >{pic.title}</h1>
                           <button onClick={() => deleteFavorites(pic.id)}>
                             {pic.isFavorite ?
-                              <img className="likeOFFIcon" alt="likeOFFIcon" src={likeON} />
+                              <img className="likeIcon" alt="likeOFFIcon" src={likeON} />
                               :
-                              <img className="likeOFFIcon" alt="likeOFFIcon" src={likeOFF} />
+                              <img className="likeIcon" alt="likeONIcon" src={likeOFF} />
                             }
                           </button></div>
                       </div>)
