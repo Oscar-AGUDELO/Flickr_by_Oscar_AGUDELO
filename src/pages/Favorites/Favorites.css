@@ -1,26 +1,74 @@
-#FavoritesContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    height: 100vh;
+#FavoritesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
 }
+
 #FavoritesContainer header {
-    height: 3.5rem;
-    background: var(--color-1);
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  #FavoritesContainer header h1 {
-    margin-left: 1rem;
-    font-size: var(--title);
-    color: var(--color-2);
-  }
-  #FavoritesContainer div p {
-    margin: 3.5rem;
-  }
+  height: 3.5rem;
+  background: var(--color-1);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#FavoritesContainer header h1 {
+  margin-left: 1rem;
+  font-size: var(--title);
+  color: var(--color-2);
+}
+
+#FavoritesContainer .nophotos p {
+  margin: 3.5rem;
+}
+
+
+
+/* css desktop */
+#FavoritesContainer_desktop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#FavoritesContainer_desktop header {
+  height: 3.5rem;
+  background: var(--color-1);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+#FavoritesContainer_desktop header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#FavoritesContainer_desktop .link {
+  margin-left: 3rem;
+  margin-top: 1px;
+}
+#FavoritesContainer_desktop .link img {
+  height: 1.3rem;
+}
+
+#FavoritesContainer_desktop header h1 {
+  margin-left: 1rem;
+  font-size: var(--title);
+  color: var(--color-2);
+}
+
+#FavoritesContainer_desktop .nophotos p {
+  margin: 3.5rem;
+}

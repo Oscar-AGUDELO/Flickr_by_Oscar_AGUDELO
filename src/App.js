@@ -11,11 +11,11 @@ const App = () => {
   
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [convertedData, setConvertedData] = useState([]);
-  const [keyword, setKeyword] = useState({ Search: "photo" });
+  const [keyword, setKeyword] = useState({ Search: "" });
   const [showData, setShowData] = useState(false);
   const [data, setData] = useState([]);
   const [go, setGo] = useState(false);
-  const API = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=7dc498bf8c2a4a431362a1b49c8a301e&tags=" + keyword.Search + "&per_page=15&format=json&nojsoncallback=1";
+  const API = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=7dc498bf8c2a4a431362a1b49c8a301e&tags=" + keyword.Search + "&per_page=50&format=json&nojsoncallback=1";
 
   const fetchAPI = async () => {
     try {

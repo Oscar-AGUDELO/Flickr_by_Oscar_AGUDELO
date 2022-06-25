@@ -78,15 +78,11 @@ const Results = ({ setConvertedData, convertedData, keyword, goToPhotoViewer }) 
                   <h1 className="titlePhoto" >{pic.title}</h1>
                   {!foundItemsFavorites(pic) ?
                     <button onClick={() => addFavorites(pic)}>
-
-                      <img className="likeOFFIcon" alt="likeOFFIcon" src={likeOFF} />
-         
+                      <img className="likeIcon" alt="likeOFFIcon" src={likeOFF} />
                     </button>
                     :
                     <button onClick={() => deleteFavorites(pic)}>
-
-                      <img className="likeOFFIcon" alt="likeOFFIcon" src={likeON} />
-
+                      <img className="likeIcon" alt="likeONIcon" src={likeON} />
                     </button>
                   }
                 </div>

@@ -188,6 +188,7 @@
   border: 0;
   border-radius: 7px;
   display: flex;
+  flex-direction: column;
   }
 #SearchContainer_vdesktop .search input{
 width: 100%;
@@ -245,6 +246,9 @@ font-size:1.3rem;
 }
 #SearchContainer_vdesktop .inputForm:invalid ~ .enterKeyword {
   display: block;
+  color:var(--color-2);
+  margin-top:1rem;
+  font-size: 0.75rem;
 }
 
 

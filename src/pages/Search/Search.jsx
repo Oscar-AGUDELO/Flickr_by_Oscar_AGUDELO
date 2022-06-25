@@ -38,7 +38,8 @@ const Search = ({ showData, go, charging, setKeyword }) => {
               <input
                 name="Search"
                 onChange={handleChange}
-                type="text" />
+                type="text"
+                required />
             </label>
             <button type="submit" className="go">{
               go ? <div className="lds-ring"><div></div><div></div><div></div><div></div></div> : "SEARCH"}
@@ -64,15 +65,16 @@ const Search = ({ showData, go, charging, setKeyword }) => {
                     onChange={handleChange}
                     type="text" placeholder="Search for photos"
                     className="inputForm"
-                    minLength="8">
+                    required
+                  >
                   </input>
-                  <span className="enterKeyword">Please enter a keyword to search fon photos</span>
+                  <span className="enterKeyword">Please enter a keyword to search for photos.</span>
                 </label>
                 <button type="submit" className="go">
                   Search
                 </button>
               </form>
-              
+
               {go ?
                 <div className="lds-ring_desktop"><div></div><div></div><div></div><div></div></div>
                 : null}
