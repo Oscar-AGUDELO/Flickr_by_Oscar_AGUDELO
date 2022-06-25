@@ -58,11 +58,7 @@
   transition: 1s;
 }
 
-#SearchContainer .go:hover {
-  background: var(--color-2);
-  color: var(--color-4);
-  border: 1px solid var(--color-4);
-}
+
 
 
 /* Loading css */

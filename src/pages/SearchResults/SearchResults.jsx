@@ -21,9 +21,6 @@ const SearchResults = ({ convertedData, setConvertedData, data, keyword, setGo, 
     setGoToPhoto(!goToPhoto)
     const goToPic = convertedData.find(pic => pic.id===item.id)
     goToPic.goToPhoto = !goToPic.goToPhoto
-    console.log(goToPic)
-    
-    console.log(convertedData)
   }
 
   const goBack = () => {
@@ -38,7 +35,7 @@ const SearchResults = ({ convertedData, setConvertedData, data, keyword, setGo, 
 
     <div className="SearchResultsContainer">
       <button className="header" onClick={goBack}><img alt="goBackIcon" src={goBackIcon} /><h1>Results for "{keyword.Search}"</h1></button>
-      <Results convertedData={convertedData} keyword={keyword} goToPhotoViewer={goToPhotoViewer} />
+      <Results setConvertedData={setConvertedData} convertedData={convertedData} keyword={keyword} goToPhotoViewer={goToPhotoViewer} />
 
     </div>
 

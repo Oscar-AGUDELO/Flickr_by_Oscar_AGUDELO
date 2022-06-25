@@ -4,7 +4,6 @@ import "./Search.css";
 import iconTrad from "../../assets/trad.svg";
 import logo from "../../assets/logo.svg";
 const Search = ({ showData, go, charging, setKeyword }) => {
-  const [noKeyword, setNoKeyword] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   useEffect(() => {
     const changeWidth = () => {
@@ -18,7 +17,6 @@ const Search = ({ showData, go, charging, setKeyword }) => {
   }, []);
   const handleChange = (e) => {
     if (e.target.value === null) {
-      setNoKeyword(true)
     } else {
       setKeyword({
         ...Search,
@@ -26,7 +24,6 @@ const Search = ({ showData, go, charging, setKeyword }) => {
       });
     }
   };
-  console.log(noKeyword)
   if (showData) {
     return <Navigate to='/SearchResults' />
   }
